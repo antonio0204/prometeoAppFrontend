@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+$dark: hotpink;
+$jumbotron-bg: #333;
+$secondary: limegreen;
+$body-bg: #555;
+@import '~bootstrap/scss/bootstrap';
+
+@import '~bootstrap/scss/bootstrap';
+// Set the full page height so we can stick the footer to the bottom
+html,
+body {
+  height: 100%;
+}
