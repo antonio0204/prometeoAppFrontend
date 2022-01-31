@@ -1,13 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-$dark: hotpink;
+$dark: #E6210A;
 $jumbotron-bg: #333;
 $secondary: limegreen;
-$body-bg: #555;
+$body-bg: #fff;
 @import '~bootstrap/scss/bootstrap';
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+
 
 @import '~bootstrap/scss/bootstrap';
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
 // Set the full page height so we can stick the footer to the bottom
 html,
 body {
   height: 100%;
 }
+

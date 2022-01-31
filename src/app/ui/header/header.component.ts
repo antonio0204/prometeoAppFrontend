@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../../services/authentication/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  isActive = false;
+  userName = '';
+
+
+  constructor(readonly route: Router, readonly authService: AuthService) { }
 
   ngOnInit(): void {
+    this.isActive = this.authService.isAuthenticated();
+    this.userName = this.authService.getUserName();
   }
-
 }

@@ -1,17 +1,21 @@
-<!-- You can change the values `dark` here with any of the following: -->
-<!-- dark, light, primary, secondary, success, info, danger, warning -->
-<nav class="navbar navbar-dark bg-dark">
-    <!-- This is the application title with a link to the root -->
-    <a class="navbar-brand" routerLinkActive="active" routerLink="/">Angular & Bootstrap</a>
-    <!-- This is a spacer so the links move to the end -->
-    <div class="mr-auto"></div>
-    <!-- This main navigation links are defined here -->
-    <div class="navbar-expand">
-      <div class="navbar-nav">
-        <!-- Each link has the routerLink property set to a different route -->
-        <a class="nav-item nav-link" routerLinkActive="active" routerLink="/home">Home</a>
-        <a class="nav-item nav-link" routerLinkActive="active" routerLink="/about">About</a>
-        <a class="nav-item nav-link" routerLinkActive="active" routerLink="/login">Login</a>
-      </div>
-    </div>
-  </nav>
+<nav class="navbar navbar-light bg-white d-flex justify-content-between  border border-end-0 border-2">    
+  <div class="p-2">
+    <a class="navbar-brand" href="https://prometeoapi.com/">
+      <img src='https://cdn.prometeoapi.com/static/img/primary%402x.png' width='150' alt='Prometeo'>
+    </a>
+  </div>
+  <div class="p-2" *ngIf="isActive else unlogged">
+    <em class="bi bi-emoji-smile" style='font-size: 1.5rem'>
+      {{userName}}
+    </em>
+  </div>
+
+  <ng-template #unlogged>
+    <em>
+      <button class="btn btn-outline-danger positionUnlogged" type="submit" [routerLink]="['/inicia-sesion']">Login</button>
+    </em>
+  </ng-template>
+  
+</nav>
+
+   
